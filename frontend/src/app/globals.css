@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: white; /* Light mode background */
+  --text-color: black; /* Light mode text color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: white; /* Light mode background */
+    --text-color: black; /* Light mode text color */
+  }
+}
+.dark {
+  --background-color: #1a1a1a; /* Dark mode background */
+  --text-color: white; /* Dark mode text color */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+.slippage {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 10px;
+  text-align: center;
+}
+.slippage.active {
+  border: 1px solid #1CF800;
+}
+
+.main-container{
+  min-height: calc(100vh - 240px);
+}
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.tootip-header:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

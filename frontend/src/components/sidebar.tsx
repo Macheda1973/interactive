@@ -57,7 +57,7 @@ const SideBar: React.FC<ConnectProps> = ({ isOpen, onClose, handeConnected }) =>
                 className='text-center border border-green-default bg-green-default  text-white dark:text-black  font-[500] text-[18px] leading-[24px] py-[5px] px-[10px] rounded-[10px] w-[120px] hover:text-green-default dark:hover:text-white hover:bg-opacity-0 transition duration-200' 
                 onClick={() => handeConnected(2)}
             >
-                Sign
+                Sign Up
             </button>
         </div>
       </div>

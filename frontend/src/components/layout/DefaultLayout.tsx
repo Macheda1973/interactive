@@ -1,5 +1,5 @@
 "use client"; // Add this line
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from "./header";
 import Footer from "./footer";
 import '../../language';
@@ -8,35 +8,12 @@ export default function DefaultLayout({
   }: {
     children: React.ReactNode;
   }) {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-
-  useEffect(() => {
-    const updateTheme = () => {
-      const darkModeActive = document.documentElement.classList.contains('dark');
-      setIsDarkMode(darkModeActive);
-    };
-
-    // Initial theme check
-    updateTheme();
-
-    // Listen for changes to the classList
-    const observer = new MutationObserver(updateTheme);
-    observer.observe(document.documentElement, { attributes: true });
-
-    return () => {
-      observer.disconnect(); // Cleanup observer on unmount
-    };
-  }, []);
   return (
-    <div className='h-screen relative bg-white dark:bg-black py-[25px] md:py-[50px]'
-    style={{
-      backgroundImage: !isDarkMode
-        ? `url('./assets/image/light-bg.png')` // Dark mode background
-        : `url('./assets/image/background.png')`, // Light mode background
-      backgroundSize: 'cover',
-    }}>
+    <div className='h-screen bg-white dark:bg-[#16153D]'>
       <Header />
-        {children}
+      <div className='bg-[#2b2b40]'>
+      {children}
+      </div>
       <Footer />
     </div>
   );

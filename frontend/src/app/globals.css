@@ -37,7 +37,7 @@ body {
 }
 
 .main-container{
-  height: 70vh;
+  height: 100%;
 }
 .tooltip {
   visibility: hidden;

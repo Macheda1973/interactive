@@ -33,7 +33,11 @@ const Header: React.FC = () => {
     }, [isSideBar]);
 
     const handleUserClick = () => {
-        isLoggedIn ? router.push("/user") : handeConnected(1);
+        if (isLoggedIn) {
+            router.push("/user");
+        } else {
+            handeConnected(1);
+        }
     };
 
     return (

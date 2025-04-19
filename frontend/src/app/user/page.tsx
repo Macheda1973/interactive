@@ -4,15 +4,15 @@ import Connect from '@/components/connect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function Portal() {
+export default function User() {
     const [isConnectOpen, setConnectOpen] = useState<boolean>(false);
     const closeConnect = () => setConnectOpen(false);
 
     const sliders = [
-      {tittle: 'Portal First', color: "bg-[#002345]"},
-      {tittle: 'Portal Second', color: "bg-[#456700]"},
-      {tittle: 'Portal Third', color: "bg-[#456278]"},
-      {tittle: 'Portal Fourth', color: "bg-[#786278]"}
+      {tittle: 'User First', color: "bg-[#002345]"},
+      {tittle: 'User Second', color: "bg-[#456700]"},
+      {tittle: 'User Third', color: "bg-[#456278]"},
+      {tittle: 'User Fourth', color: "bg-[#786278]"}
     ];
     
       const [currentIndex, setCurrentIndex] = useState(0);
